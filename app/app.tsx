@@ -81,7 +81,7 @@ export default function App() {
 
   return (
     <div className="flex-container" style={{display: 'flex', alignItems: 'center',justifyContent: 'center'}}>
-    <ResultForm sutomResult={sutomResult} setSutomResult={setSutomResult} handleResult={handleResult}/>
+    <ResultForm handleResult={handleResult}/>
     <Score score={score}/>
     </div>
   );

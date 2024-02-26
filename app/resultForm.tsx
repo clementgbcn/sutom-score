@@ -2,10 +2,10 @@ import { Result } from "postcss";
 import { SetStateAction } from "react";
 import "./ResultForm.css"
 
-export type ResultFormProps = {sutomResult: string, setSutomResult: (a: SetStateAction<string>) => void, handleResult: (a: string) => void}
+export type ResultFormProps = {handleResult: (a: string) => void}
 
-export const ResultForm = ({sutomResult, setSutomResult, handleResult}: ResultFormProps) => {
-    function handleSubmit(e) {
+export const ResultForm = ({handleResult}: ResultFormProps) => {
+    function handleSubmit(e: any) {
         // Prevent the browser from reloading the page
         e.preventDefault();
 

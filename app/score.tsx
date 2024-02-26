@@ -7,6 +7,6 @@ export type ScoreProps = {score: number}
 export const Score = ({score}: ScoreProps) => {
     console.error(`The score is ${score}`)
     return (
-        <div className="score" style={{"--percent": `${score}`}}/>
+        <div className="score" style={{ "--percent": `${score}` } as React.CSSProperties}/>
     )
 }
