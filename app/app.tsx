@@ -4,6 +4,7 @@ import exp from "constants";
 import { ResultForm} from "./resultForm";
 import { useState } from "react";
 import { Score } from "./score";
+import { CopyScore } from "./copyScore";
 
 const sutomResultFirstLine = RegExp("^#SUTOM #(\\d+) (\\d+|-)\\/6 (\\d+h)?(\\d+):(\\d+)$")
 
@@ -83,6 +84,7 @@ export default function App() {
     <div className="flex-container" style={{display: 'flex', alignItems: 'center',justifyContent: 'center'}}>
     <ResultForm handleResult={handleResult}/>
     <Score score={score}/>
+    <CopyScore score={score} sutomResult={sutomResult}/>
     </div>
   );
 }
