@@ -17,7 +17,7 @@ export const ResultForm = ({handleResult}: ResultFormProps) => {
         <form onSubmit={handleSubmit} >
         <label>Paste your SUTOM result:</label>
         <div></div>
-        <textarea cols={40} rows={5} defaultValue="I really enjoyed biking yesterday!"/>
+        <textarea cols={40} rows={10} defaultValue="" placeholder="#SUTOM #... ./6 XX:YY"/>
         <div></div>
         <button type="submit" className="button-3" role="button">Compute Score</button>
         </form>
