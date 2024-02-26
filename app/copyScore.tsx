@@ -1,5 +1,3 @@
-import { Result } from "postcss";
-import { SetStateAction } from "react";
 import "./Score.css"
 
 export type ScoreProps = {score: number, sutomResult: string}
