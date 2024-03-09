@@ -1,0 +1,30 @@
+.button-3:hover {
+  background-color: #2980b9;
+}
+
+.popover {
+  padding: 5px 10px;
+  background-color: #f1c40f;
+  color: #2c3e50;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 100%; /* Place it above the button */
+  left: app/App.css 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; /* Add fading transitions */
+  opacity: 0;
+  visibility: hidden;
+}
+
+.actionButtonContainer {
+  position: relative; /* Set relative position for popover absolute positioning */
+  display: inline-block; /* For proper positioning over the button */
+  width: 100%;
+}
+
+/* Trigger the fade in */
+.actionButtonContainer:hover .popover {
+  opacity: 1;
+  visibility: visible;
+}
