@@ -10,7 +10,7 @@ export const ResultForm = ({ handleResult }: ResultFormProps) => {
     e.preventDefault();
 
     // Read the form data
-    console.error(`The form was submitted with the value ${e.target[0].value}`);
+    console.log(`The form was submitted with the value ${e.target[0].value}`);
     handleResult(e.target[0].value);
   }
 

@@ -7,7 +7,7 @@ export type ScoreProps = { score: number; sutomResult: string };
 const emojiResult = ["😭", "😞", "🔥", "🚀", "🎯"];
 
 export const CopyScore = ({ score, sutomResult }: ScoreProps) => {
-  console.error(`The score is ${score}`);
+  console.log(`The score is ${score}`);
   const [showPopover, setShowPopover] = useState(false);
 
   useEffect(() => {

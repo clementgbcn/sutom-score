@@ -29,10 +29,10 @@ const parseSutomResult = (sutomResult: string) => {
   🟥🟥🟥🟥🟥🟥🟥🟥\
   https://sutom.nocle.fr\
   ";
-  console.error(`Parsing the SUTOM result ${sutomResult}`);
+  console.log(`Parsing the SUTOM result ${sutomResult}`);
   const multiline = sutomResult.split("\n");
   const parse = sutomResultFirstLine.exec(multiline[0]);
-  console.error(multiline);
+  console.log(multiline);
   if (parse === null) {
     return null;
   }
@@ -43,14 +43,13 @@ const parseSutomResult = (sutomResult: string) => {
     (parse[3] === undefined ? 0 : parseInt(parse[3]) * 3600) +
     parseInt(parse[4]) * 60 +
     parseInt(parse[5]);
-  console.error(
+  console.log(
     `Parsing the SUTOM ${sutomIndex}, done in ${nbTry} try, isSuccess=${isSuccess} and it was done in ${time} seconds`
   );
   const counts = { red: 0, yellow: 0, blue: 0 };
   for (let i = 1; i < multiline.length; i++) {
     for (let j = 0; j < multiline[i].length; j += 2) {
       const unicode = multiline[i][j] + multiline[i][j + 1];
-      //console.error(`multiline[${i}][${j}] unicode = ${unicode}`)
       if (unicode === redBox) {
         counts.red++;
       } else if (unicode === yellowCircle) {
@@ -60,7 +59,7 @@ const parseSutomResult = (sutomResult: string) => {
       }
     }
   }
-  console.error(
+  console.log(
     `There are ${counts.red} red boxes, ${counts.yellow} yellow circles and ${counts.blue} blue squares`
   );
   return { isSuccess, nbTries: nbTry, time, counts };
